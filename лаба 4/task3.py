@@ -4,8 +4,13 @@ def delete(list_, index=None):
     if index == None:
         list_ = list_[:-1]
         return list_
+    elif index == 0:
+        list_ = list_[index + 1:]
+        return list_
     else:
-        list_ = list_[index:]
+        list_1 = list_[:index]
+        list_2 = list_[index+1:]
+        list_ = list_1 + list_2
         return list_
 
 
